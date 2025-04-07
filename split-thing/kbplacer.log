@@ -1,0 +1,65 @@
+[kbplacer_plugin_action.py:65]: Plugin version: 0.13
+[kbplacer_plugin_action.py:66]: Python version: '3.11.5 (main, Jan 27 2025, 07:08:36) [MSC v.1942 64 bit (AMD64)]'
+[kbplacer_plugin_action.py:67]: KiCad version: 9.0.0 with 4.2.2 msw (phoenix) wxWidgets 3.2.6
+[kbplacer_dialog.py:586]: Language: en
+[kbplacer_plugin_action.py:75]: GUI state: {"layout_path": "C:\\Users\\Isac Tuner\\Downloads\\tenrings.json", "key_distance": [19.05, 19.05], "key_info": {"annotation_format": "CH{}", "position_option": "Default", "position": {"x": 0.0, "y": 0.0, "orientation": 0.0, "side": "Front"}, "template_path": ""}, "enable_diode_placement": false, "route_switches_with_diodes": false, "optimize_diodes_orientation": false, "diode_info": {"annotation_format": "D{}", "position_option": "Default", "position": {"x": 5.08, "y": 3.03, "orientation": 90.0, "side": "Back"}, "template_path": ""}, "additional_elements": [{"annotation_format": "ST{}", "position_option": "Custom", "position": {"x": 0.0, "y": 0.0, "orientation": 0.0, "side": "Front"}, "template_path": ""}], "route_rows_and_columns": false, "template_path": "", "generate_outline": false, "outline_delta": 0.0}
+[key_placer.py:362]: Set key 1U distance: 19050000/19050000
+[key_placer.py:124]: Switches by nets: defaultdict(<class 'list'>, {frozenset({'10', 'GND'}): ['CH10'], frozenset({'9', 'GND'}): ['CH9'], frozenset({'8', 'GND'}): ['CH8'], frozenset({'GND', '7'}): ['CH7'], frozenset({'GND', '6'}): ['CH6'], frozenset({'GND', '5'}): ['CH5'], frozenset({'GND', '4'}): ['CH4'], frozenset({'3', 'GND'}): ['CH3'], frozenset({'GND', '2'}): ['CH2'], frozenset({'GND', '1'}): ['CH1']})
+[key_placer.py:128]: Diodes by switch: {}
+[board_modifier.py:64]: Searching for CH1 footprint in C:\Users\Isac Tuner\Documents\GitHub\split-thing\split-thing\split-thing\split-thing.kicad_pcb
+[key_placer.py:558]: Looking for connection template between CH1 and other elements
+[board_modifier.py:98]: Getting CH1 footprint position: (199490000, 59470000)
+[key_placer.py:602]: Got connection template: 
+[kle_serial.py:897]: User layout: [{'name': 'tenrings'}, [{'r': 10, 'rx': 1, 'y': 0.15, 'x': 1.5, 'a': 7}, ''], [{'y': -0.6499999999999999, 'x': 0.5}, '', {'x': 1}, ''], [{'y': -0.3500000000000001, 'x': 1.5}, ''], [{'y': -0.6499999999999999, 'x': 0.5}, '', {'x': 1}, ''], [{'y': -0.75, 'x': -0.5}, ''], [{'y': -0.6000000000000001, 'x': 1.5}, ''], [{'y': -0.6499999999999999, 'x': 2.5}, ''], [{'x': 2.5, 'a': 4, 'fa': [2], 'w': 2}, 'should be able to do diodeless, trimming 5v and 3v pins on standoffs for xiao nrf']]
+[key_placer.py:662]: Layout offset: (38100000, 25717500)
+[board_modifier.py:85]: Setting CH1 footprint position: (95250000, 38100000)
+[board_modifier.py:85]: Setting CH2 footprint position: (76200000, 44767500)
+[board_modifier.py:85]: Setting CH3 footprint position: (114300000, 44767500)
+[board_modifier.py:85]: Setting CH4 footprint position: (95250000, 57150000)
+[board_modifier.py:85]: Setting CH5 footprint position: (76200000, 63817500)
+[board_modifier.py:85]: Setting CH6 footprint position: (114300000, 63817500)
+[board_modifier.py:85]: Setting CH7 footprint position: (57150000, 68580000)
+[board_modifier.py:85]: Setting CH8 footprint position: (95250000, 76200000)
+[board_modifier.py:85]: Setting CH9 footprint position: (114300000, 82867500)
+[board_modifier.py:85]: Setting CH10 footprint position: (123825000, 101917500)
+[key_placer.py:999]: Diode info: [ElementInfo(annotation_format='D{}', position_option=<PositionOption.UNCHANGED: 'Unchanged'>, position=ElementPosition(x=5.08, y=3.03, orientation=90.0, side=<Side.BACK: 'Back'>), template_path='')]
+[key_placer.py:775]: Placing additional elements for CH10
+[board_modifier.py:98]: Getting CH10 footprint position: (109580066, 112337843)
+[board_modifier.py:75]: Searching for optional ST10 footprint in C:\Users\Isac Tuner\Documents\GitHub\split-thing\split-thing\split-thing\split-thing.kicad_pcb
+[board_modifier.py:80]: Footprint not found
+[key_placer.py:775]: Placing additional elements for CH9
+[board_modifier.py:98]: Getting CH9 footprint position: (103507770, 91923256)
+[board_modifier.py:75]: Searching for optional ST9 footprint in C:\Users\Isac Tuner\Documents\GitHub\split-thing\split-thing\split-thing\split-thing.kicad_pcb
+[board_modifier.py:80]: Footprint not found
+[key_placer.py:775]: Placing additional elements for CH8
+[board_modifier.py:98]: Getting CH8 footprint position: (85904981, 82049053)
+[board_modifier.py:75]: Searching for optional ST8 footprint in C:\Users\Isac Tuner\Documents\GitHub\split-thing\split-thing\split-thing\split-thing.kicad_pcb
+[board_modifier.py:80]: Footprint not found
+[key_placer.py:775]: Placing additional elements for CH7
+[board_modifier.py:98]: Getting CH7 footprint position: (49707005, 67928822)
+[board_modifier.py:75]: Searching for optional ST7 footprint in C:\Users\Isac Tuner\Documents\GitHub\split-thing\split-thing\split-thing\split-thing.kicad_pcb
+[board_modifier.py:80]: Footprint not found
+[key_placer.py:775]: Placing additional elements for CH6
+[board_modifier.py:98]: Getting CH6 footprint position: (106815768, 73162669)
+[board_modifier.py:75]: Searching for optional ST6 footprint in C:\Users\Isac Tuner\Documents\GitHub\split-thing\split-thing\split-thing\split-thing.kicad_pcb
+[board_modifier.py:80]: Footprint not found
+[key_placer.py:775]: Placing additional elements for CH5
+[board_modifier.py:98]: Getting CH5 footprint position: (69294592, 66546673)
+[board_modifier.py:75]: Searching for optional ST5 footprint in C:\Users\Isac Tuner\Documents\GitHub\split-thing\split-thing\split-thing\split-thing.kicad_pcb
+[board_modifier.py:80]: Footprint not found
+[key_placer.py:775]: Placing additional elements for CH4
+[board_modifier.py:98]: Getting CH4 footprint position: (89212979, 63288465)
+[board_modifier.py:75]: Searching for optional ST4 footprint in C:\Users\Isac Tuner\Documents\GitHub\split-thing\split-thing\split-thing\split-thing.kicad_pcb
+[board_modifier.py:80]: Footprint not found
+[key_placer.py:775]: Placing additional elements for CH3
+[board_modifier.py:98]: Getting CH3 footprint position: (110123765, 54402081)
+[board_modifier.py:75]: Searching for optional ST3 footprint in C:\Users\Isac Tuner\Documents\GitHub\split-thing\split-thing\split-thing\split-thing.kicad_pcb
+[board_modifier.py:80]: Footprint not found
+[key_placer.py:775]: Placing additional elements for CH2
+[board_modifier.py:98]: Getting CH2 footprint position: (72602590, 47786085)
+[board_modifier.py:75]: Searching for optional ST2 footprint in C:\Users\Isac Tuner\Documents\GitHub\split-thing\split-thing\split-thing\split-thing.kicad_pcb
+[board_modifier.py:80]: Footprint not found
+[key_placer.py:775]: Placing additional elements for CH1
+[board_modifier.py:98]: Getting CH1 footprint position: (92520977, 44527878)
+[board_modifier.py:75]: Searching for optional ST1 footprint in C:\Users\Isac Tuner\Documents\GitHub\split-thing\split-thing\split-thing\split-thing.kicad_pcb
+[board_modifier.py:80]: Footprint not found
