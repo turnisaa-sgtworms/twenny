@@ -1,0 +1,193 @@
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+
+
+/ {
+keymap {
+	compatible = "zmk,keymap";
+	one {
+		display-name = "base";
+		bindings = <
+				&kp W &kp E &kp T &kp U &kp I &kp O
+				&kp A &kp S &hml LALT D &hml LCTRL F &hmr RCTRL H &hmr LALT K &kp L &kp P
+				&kp C &kp B &kp N &kp M
+				&mt LSHIFT SPACE &lt 1 SPACE
+			>;
+	};
+	two { display-name = "numico";
+		bindings = <
+				AS(1) AS(2) AS(3) &td0 &td1 &td2
+				AS(4) AS(5) AS(6) AS(7) AS(SEMI) AS(COMMA) AS(DOT) AS(FSLH)
+				AS(8) AS(9) AS(MINUS) AS(EQUAL)
+				AS(0) &none
+			>;
+	};
+	three { status = "reserved" };
+	four { status = "reserved" };
+	five { status = "reserved" };
+	};
+};
+
+
+/ {
+combos {
+	compatible = "zmk,combos";
+	combo_tab {
+		timeout-ms <50>;
+		key-positions = <0 2>;
+		bindings = <&kp TAB>;
+		layers = <0>;
+	};
+	combo_esc {
+		timeout-ms <50>;
+		key-positions = <3 5>;
+		bindings = <&kp ESC>;
+		layers = <0>;
+	};
+	combo_backspace {
+		timeout-ms <50>;
+		key-positions = <12 13>;
+		bindings = <&kp BSPC>;
+		layers = <0>;
+	};
+	combo_enter {
+		timeout-ms <50>;
+		key-positions = <9 10>;
+		bindings = <&kp ENTER>;
+		layers = <0>;
+	};
+	combo_up {
+		timeout-ms <50>;
+		key-positions = <1 4>;
+		bindings = <&kp UP>;
+		layers = <0>;
+	};
+	combo_left {
+		timeout-ms <50>;
+		key-positions = <7 10>;
+		bindings = <&kp LEFT>;
+		layers = <0>;
+	};
+	combo_down {
+		timeout-ms <50>;
+		key-positions = <8 11>;
+		bindings = <&kp DOWN>;
+		layers = <0>;
+	};
+	combo_right {
+		timeout-ms <50>;
+		key-positions = <9 12>;
+		bindings = <&kp RIGHT>;
+		layers = <0>;
+	};
+	combo_q {
+		timeout-ms <50>;
+		key-positions = <0 6>;
+		bindings = <&kp Q>;
+		layers = <0>;
+	};
+	combo_r {
+		timeout-ms <50>;
+		key-positions = <1 2>;
+		bindings = <&kp R>;
+		layers = <0>;
+	};
+	combo_y {
+		timeout-ms <50>;
+		key-positions = <3 4>;
+		bindings = <&kp Y>;
+		layers = <0>;
+	};
+	combo_z {
+		timeout-ms <50>;
+		key-positions = <5 13>;
+		bindings = <&kp Z>;
+		layers = <0>;
+	};
+	combo_g {
+		timeout-ms <50>;
+		key-positions = <8 9>;
+		bindings = <&kp G>;
+		layers = <0>;
+	};
+	combo_j {
+		timeout-ms <50>;
+		key-positions = <10 11>;
+		bindings = <&kp J>;
+		layers = <0>;
+	};
+	combo_v {
+		timeout-ms <50>;
+		key-positions = <14 15>;
+		bindings = <&kp V>;
+		layers = <0>;
+	};
+	combo_x {
+		timeout-ms <50>;
+		key-positions = <16 17>;
+		bindings = <&kp X>;
+		layers = <0>;
+	};
+};
+
+
+
+/ {
+behaviors {
+	td0: tap_dance_0 {
+		compatible = "zmk,behavior-tap-dance";
+		#binding-cells <0>;
+		tapping-term-ms = <150>;
+		bindings = <&kp KP_LPAR>, <&kp KP_RPAR>;
+	};
+	td1: tap_dance_1 {
+		compatible = "zmk,behavior-tap-dance";
+		#binding-cells <0>;
+		tapping-term-ms = <150>;
+		bindings = <LBRC>,<RBRC>;
+	};
+	td2: tap_dance_2 {
+		compatible = "zmk,behavior-tap-dance";
+		#binding-cells <0>;
+		tapping-term-ms = <150>;
+		bindings = <LBKT>,<RBKT>;
+	};
+	td3: tap_dance_3 {
+		compatible = "zmk,behavior-tap-dance";
+		#binding-cells <0>;
+		tapping-term-ms = <150>;
+		bindings = <TAB>,<ESC>;
+	};
+	hml: home_row_mod_left {
+            	compatible = "zmk,behavior-hold-tap";
+            	#binding-cells = <2>;
+            	flavor = "balanced";
+            	require-prior-idle-ms = <150>;
+            	tapping-term-ms = <250>;
+            	quick-tap-ms = <175>;
+            	bindings = <&kp>, <&kp>;
+            	hold-trigger-key-positions = <3 4 5 10 11 12 13 16 17 19>; // List of keys on the right side of the keyboard
+            	hold-trigger-on-release;
+        };
+        hmr: home_row_mod_right {
+            	compatible = "zmk,behavior-hold-tap";
+            	#binding-cells = <2>;
+            	flavor = "balanced";
+            	require-prior-idle-ms = <150>;
+            	tapping-term-ms = <250>;
+            	quick-tap-ms = <175>;
+            	bindings = <&kp>, <&kp>;
+            	hold-trigger-key-positions = <0 1 2 6 7 8 9 14 15 18>; // List of keys on the left side of the keyboard
+            	hold-trigger-on-release;
+        };
+	as: auto_shift {
+            	compatible = "zmk,behavior-hold-tap";
+            	#binding-cells = <2>;
+            	tapping_term_ms = <135>;
+            	quick_tap_ms = <0>;
+            	flavor = "tap-preferred";
+            	bindings = <&kp>, <&kp>;
+        };
+};
+
+

@@ -1,0 +1,10 @@
+file_format: "1"
+id: twenny
+name: twenny
+type: shield
+url: https://github.com/turnisaa/twenny
+requires:
+  - seeed_xiao_ble
+features:
+  - keys
+  - studio

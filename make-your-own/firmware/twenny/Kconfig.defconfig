@@ -1,0 +1,21 @@
+config ZMK_PM_SOFT_OFF
+	default y
+config ZMK_POINTING
+	default y
+
+if SHIELD_TWENNY_LEFT
+
+config ZMK_KEYBOARD_NAME
+	default "twenny_left"
+
+config ZMK_SPLIT_ROLE_CENTRAL
+	default y
+
+endif
+
+if SHIELD_TWENNY_LEFT || SHIELD_TWENNY_RIGHT
+
+config ZMK_SPLIT
+	default y
+
+endif

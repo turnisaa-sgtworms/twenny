@@ -1,0 +1,46 @@
+#include <physical_layouts.dtsi>
+/ {
+    twenny_physical_layout: twenny_physical_layout {
+        compatible = "zmk,physical-layout";
+        display-name = "twenny";
+        kscan = <&kscan0>;
+        transform = <&default_transform>;
+
+        keys  //                     w   h    x    y     rot    rx    ry
+            = <&key_physical_attrs 100 100  100   50       0     0     0>
+            , <&key_physical_attrs 100 100  200   15       0     0     0>
+            , <&key_physical_attrs 100 100  300   50       0     0     0>
+            , <&key_physical_attrs 100 100  550   50       0     0     0>
+            , <&key_physical_attrs 100 100  650   15       0     0     0>
+            , <&key_physical_attrs 100 100  750   50       0     0     0>
+            , <&key_physical_attrs 100 100    0  175       0     0     0>
+            , <&key_physical_attrs 100 100  100  150       0     0     0>
+            , <&key_physical_attrs 100 100  200  115       0     0     0>
+            , <&key_physical_attrs 100 100  300  150       0     0     0>
+            , <&key_physical_attrs 100 100  550  150       0     0     0>
+            , <&key_physical_attrs 100 100  650  115       0     0     0>
+            , <&key_physical_attrs 100 100  750  150       0     0     0>
+            , <&key_physical_attrs 100 100  850  175       0     0     0>
+            , <&key_physical_attrs 100 100  200  215       0     0     0>
+            , <&key_physical_attrs 100 100  300  250       0     0     0>
+            , <&key_physical_attrs 100 100  550  250       0     0     0>
+            , <&key_physical_attrs 100 100  650  215       0     0     0>
+            , <&key_physical_attrs 100 100  350  350       0     0     0>
+            , <&key_physical_attrs 100 100  500  350       0     0     0>
+            ;
+    };
+
+    position_map {
+        compatible = "zmk,physical-layout-position-map";
+
+        complete;
+
+        twenny_physical_layout {
+            physical-layout = <&twenny_physical_layout>;
+            positions = < 0  1  2  3  4  5>
+		   , < 6  7  8  9  10 11 12 13>
+		  	, <  14 15 16 17>
+			    , < 18 19>;
+        };
+    };
+};
