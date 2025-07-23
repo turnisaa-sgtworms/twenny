@@ -1,5 +1,7 @@
 twenny, 20 key wireless split.
 
+![pretty collage of twenny](https://github.com/turnisaa-sgtworms/twenny/blob/main/images/twenny-collage.png)
+
 features: 
  - diodeless
  - reversible
