@@ -1,19 +1,40 @@
 twenny, 20 key wireless split.
 
-IF YOU DO NOT READ THE BUILD GUIDE THIS THING WILL PROBABLY EXPLODE!!!!! READ IT!!!!!
-
 features: 
  - diodeless
  - reversible
  - throughole soldered xiao
  - cheap! fits jlcpcb's 2 dollar pcb requirements... good even for the tariffs we're getting right now in the US.
- - 3dp case with a cut acrylic top, cut acrylic case soon(?)
+ - two 3dp case options, one with a cut acrylic top
+ - easy (but mildly jank, fine as long as you follow instructions) assembly. just solder on a xiao and switches and you're good to go!
 
-easy (but mildly jank, easy as long as you follow instructions other than probably the battery pads) assembly. as mentioned before, no pcba is required, just solder on a xiao and switches and you're good to go!
+**IF YOU DO NOT READ THE BUILD GUIDE THIS THING WILL PROBABLY EXPLODE!!!!! READ IT!!!!!**
 
-bill of materials
+# bill of materials
 
 2x - twenny pcb
+
+2x - seeed xiao nrf52840 dev boards
+
+20x - choc v1 switches of choice
+
+20x - choc v1 keycaps of choice
+
+2x - adafruit lipo 100mAh battery - product id 1570 (both cases are designed to use this battery)
+
+2x - female jst connector
+
+**For the new case:**
+
+1x (of each) - 3d printed case parts
+
+*optional based on your bottom case choice*: 12x - 2mm thick, 3.5mm outer diameter m.2 heat inserts
+
+*also optional*: 12x - 2mm thick, 3.5mm outer diameter m.2 heat inserts
+
+12x - 5mm m.2 screws
+
+**For the old case:**
 
 1x (of each) - 3d printed case parts
 
@@ -25,17 +46,8 @@ bill of materials
 
 4x - 14mm m.2 screws
 
-2x - seeed xiao nrf52840 dev boards
 
-2x - adafruit lipo 100mAh battery - product id 1570
-
-2x - female jst connector
-
-20x - choc v1 switches of choice (i used lowprobkb's nocturnal switches)
-
-20x - choc v1 keycaps of choice (i resin printed some KLP Lame keycaps)
-
-quick guide, INCOMPLETE probably, will add pics eventually:
+# quick guide, INCOMPLETE probably, will add pics eventually:
 
 **1 THE HARD PART:**
 
@@ -95,9 +107,9 @@ quick guide, INCOMPLETE probably, will add pics eventually:
   
        slip the acrylic piece on top, and screw the 5mm m.2 screws into the heat inserts through the holes in it. leave em loose till you have them all started, then tighten the bottom screws, then tighten the top screws down evenly.
   
-**6 THE INCOMPLETE PART:**
+**6 THE FIRM PART:**
 
-       flash some firmware on that bad boy (i haven't made it available yet but i will when i get the chance. I think you can clone my zmk config repo and edit the keymap there, but i don't know how exactly that works.)
+       flash some firmware on that bad boy!
   
        note: you will need a bind for SOFT OFF. this keeb has no physical off switch, but soft off works great.
     
